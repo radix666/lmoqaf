@@ -1,8 +1,8 @@
-# مشروع أفورا (Lmoqaf) 🇲🇦
+# Lmoqaf Project 🇲🇦
 
-منصة وتطبيق موبايل لربط الحرفيين والصناع التقليديين مع الزبناء في المغرب.
+A platform and mobile app to connect artisans and traditional craftsmen with customers in Morocco.
 
-## التقنيات المستعملة:
-* **الويب:** React & TypeScript
-* **الموبايل:** Flutter
-* **قاعدة البيانات:** Firebase
+## Technologies Used:
+* **Web:** React & TypeScript
+* **Mobile:** Flutter
+* **Database:** Firebase
