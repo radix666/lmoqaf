@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans Arabic", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, serif;
+
+  --color-sand-50: #FCFCFA;
+  --color-sand-100: #F5F5F0;
+  --color-sand-200: #EAEAE0;
+  --color-sand-300: #D8D8CA;
+  --color-olive-600: #6B6B4E;
+  --color-olive-700: #575741;
+  --color-olive-800: #4A4A35;
+  --color-olive-900: #2E2E20;
+  --color-clay-400: #C97D63;
+  --color-clay-500: #B86B52;
+  --color-clay-600: #9E5640;
+  --color-gold-400: #C9A84C;
+  --color-gold-500: #B8943C;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-sand-100);
+  color: var(--color-olive-900);
+}
+
+/* ── Hero ───────────────────────────────────────────── */
+.hero-bg {
+  background-color: #1e1e14;
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(184, 107, 82, 0.22) 0%, transparent 70%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='30' cy='30' r='1' fill='rgba(255,255,255,0.03)'/%3E%3C/svg%3E");
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid rgba(184, 107, 82, 0.4);
+  background: rgba(184, 107, 82, 0.10);
+  color: #C97D63;
+  border-radius: 100px;
+  padding: 6px 16px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+/* ── Navbar ─────────────────────────────────────────── */
+.navbar-glass {
+  background: rgba(252, 252, 250, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-sand-200);
+}
+
+/* ── Cards ──────────────────────────────────────────── */
+.artisan-card {
+  background: #FFFFFF;
+  border: 1px solid var(--color-sand-200);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+
+.artisan-card:hover {
+  box-shadow: 0 12px 40px rgba(46, 46, 32, 0.10);
+  transform: translateY(-3px);
+  border-color: var(--color-sand-300);
+}
+
+.artisan-card-accent {
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-clay-500), var(--color-clay-400));
+}
+
+/* ── Buttons ────────────────────────────────────────── */
+.btn-primary {
+  background: var(--color-clay-500);
+  color: #FFFFFF;
+  border-radius: 100px;
+  padding: 10px 24px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(184, 107, 82, 0.30);
+}
+
+.btn-primary:hover {
+  background: var(--color-clay-600);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(184, 107, 82, 0.35);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-clay-500);
+  border: 1.5px solid var(--color-clay-500);
+  border-radius: 100px;
+  padding: 9px 22px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+  background: rgba(184, 107, 82, 0.06);
+}
+
+.btn-contact {
+  background: var(--color-sand-100);
+  color: var(--color-olive-800);
+  border: 1px solid var(--color-sand-200);
+  border-radius: 10px;
+  padding: 8px 18px;
+  font-weight: 500;
+  font-size: 0.83rem;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-contact:hover {
+  background: var(--color-clay-500);
+  border-color: var(--color-clay-500);
+  color: #fff;
+}
+
+/* ── Step Cards ─────────────────────────────────────── */
+.step-card {
+  background: #FFFFFF;
+  border: 1px solid var(--color-sand-200);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.step-card:hover {
+  box-shadow: 0 8px 30px rgba(46, 46, 32, 0.08);
+  transform: translateY(-2px);
+}
+
+.step-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+}
+
+/* ── Section divider ────────────────────────────────── */
+.section-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-clay-500);
+  margin-bottom: 0.6rem;
+}
+
+/* ── Scrollbar ──────────────────────────────────────── */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #d1d1c7;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #b0b0a4;
+}
+
+/* ── Pill / Arch image shapes ───────────────────────── */
+.pill-image {
+  border-radius: 9999px;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+
+.arch-image {
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  object-fit: cover;
+}
+
+/* ── Search box ─────────────────────────────────────── */
+.search-box {
+  background: #FFFFFF;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
